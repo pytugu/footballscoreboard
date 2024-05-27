@@ -1,4 +1,14 @@
-function paint(color) {
-    const circle = document.getElementById('circleID');
-    circle.style = `background-color:${color}`;
+
+function add(id) {
+  var score = parseInt(document.getElementById(id).innerHTML);
+  ++score;
+  document.getElementById(id).innerHTML = score;
+}
+
+function subtract(id) {
+  var score = parseInt(document.getElementById(id).innerHTML);
+  if (score > 0) {
+    --score;
   }
+  document.getElementById(id).innerHTML = score;
+}

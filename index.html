@@ -4,21 +4,39 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Colorify</title>
+  <title>Scoreboard</title>
   <link rel="stylesheet" href="./index.css">
   <script src="./index.js" defer></script>
 </head>
 <body>
   <div class="container">
-    <h1>Football Scoreboard</h1>
-    <p class="subheading">
-      Football (real football) scoreboard.
-    </p>
-    <div class="circle" id="circleID"></div>
-    <div class="action">
-      <button onclick="paint('red')">Red</button>
-      <button onclick="paint('green')">Green</button>
-      <button onclick="paint('yellow')">Yellow</button>
+  <h1>Football Scoreboard</h1>
+  <p class="subheading">
+    Football (real football) scoreboard.
+  </p>
+  </div>
+  <div class="flex-container">
+    <div class="flex-child-1">
+      Team 1
+    </div>
+    <div class="flex-child-2">
+      Team 2
+    </div>
+  </div>
+  <div class="flex-container">
+    <div class="flex-child-1">
+      <p id="score1">0</p>
+      <div class="action">
+        <button onclick="add('score1')">+</button>
+        <button onclick="subtract('score1')">-</button>
+      </div>
+    </div>
+    <div class="flex-child-2">
+      <p id="score2">0</p>
+      <div class="action">
+        <button onclick="add('score2')">+</button>
+        <button onclick="subtract('score2')">-</button>
+      </div>
     </div>
   </div>
 </body>
