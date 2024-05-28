@@ -10,17 +10,20 @@
 </head>
 <body>
   <div class="container">
-  <h1>Football Scoreboard</h1>
-  <p class="subheading">
-    Football (real football) scoreboard.
-  </p>
+  <h1>Scoreboard</h1>
   </div>
   <div class="flex-container">
     <div class="flex-child-1">
-      Team 1
+      <p id="team1">Team 1 name:</p>
+      <input type="text" name="message" id="user_input1">
+      <input type="submit" id="submit1" onclick="showInput('user_input1','submit1','team1');"><br/>
+      <p></p>
     </div>
     <div class="flex-child-2">
-      Team 2
+      <p id="team2">Team 2 name:</p>
+      <input type="text" name="message" id="user_input2">
+      <input type="submit" id="submit2" onclick="showInput('user_input2','submit2','team2');"><br/>
+      <p></p>
     </div>
   </div>
   <div class="flex-container">
@@ -38,6 +41,18 @@
         <button onclick="subtract('score2')">-</button>
       </div>
     </div>
+  </div>
+  <div class="container">
+          <div class="otp-countdown" id="timer-countdown">5:00</div>
+          <div class="action" id="start_button">
+            <button onclick="countdown('timer-countdown')">Start</button>
+          </div>
+          
+  </div>
+  <div class="container" id="set_time">
+    <p>Set time in minutes:
+          <input type="mumber" min="0" max="50" placeholder="int between 0 and 50" id="user_input_timer">
+          <input type="submit" id="submit_time" onclick="setTimer('user_input_timer','otp-countdown');">
   </div>
 </body>
 </html>
